@@ -52,14 +52,15 @@ for (let i = 0; i < 20; i++) {
   person.gender = gender;
   if (gender === "M") {
     person.name = maleNames[randChoice(maleNames)];
-  }
-  if (gender === "F") {
+  } else {
     person.name = femaleNames[randChoice(femaleNames)];
   }
   person.lastName = lastNames[randChoice(lastNames)];
-  person.age = Math.floor(Math.random() * 100 + 1);
+  person.age = Math.floor(Math.random() * (87 - 18 + 1)) + 18;
   people.push(person);
 }
+
+console.log(people);
 
 const data = JSON.stringify(people);
 
