@@ -55,7 +55,7 @@ for (let i = 0; i < 20; i++) {
   } else {
     person.name = femaleNames[randChoice(femaleNames)];
   }
-  person.lastName = lastNames[randChoice(lastNames)];
+  person.lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
   person.age = Math.floor(Math.random() * (87 - 18 + 1)) + 18;
   people.push(person);
 }
